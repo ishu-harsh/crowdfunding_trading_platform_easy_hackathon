@@ -1,0 +1,2 @@
+# crowdfunding_trading_platform_easy_hackathon
+Crowdfunding and Trading Platform
