@@ -4,6 +4,8 @@ import Login from './pages/Login';
 import Production from './pages/Production';
 import Dashboard from './pages/Dashboard';
 import Chart from './pages/Chart';
+import Exchange from './pages/Exchange';
+import Marketplace from './pages/Marketplace';
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
             <Route path='/login' element={<Login/>}/>
             <Route path='/dashboard' element={<Dashboard/>}/>
             <Route path='/chart' element={<Chart/>}/>
+            <Route path='/exchange' element={<Exchange/>}/>
+            <Route path='/marketplace' element={<Marketplace/>}/>
             <Route path='*' element={<Production/>}/>
             
             

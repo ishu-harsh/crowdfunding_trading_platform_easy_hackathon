@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
+import InFinBlockImage from '../resource/INFINBLOCK__1_-ai-brush-removebg-iyxg5peq.png';
 
 
 const Navbar = () =>{
@@ -31,8 +32,8 @@ const Navbar = () =>{
     return (
       <div className='bg-black flex justify-between items-center h-24 max-w-full mx-auto px-4 text-white shadow-lg'>
         {/* Logo */}
-        <h1  onClick={() => handleNavigation("/")} className=' cursor-pointer w-full text-3xl font-bold text-[#00df9a]'>InFinBlock</h1>
-  
+        <img src={InFinBlockImage} alt='InFinBlock' className='h-[120px] w-[200px] shadow-xl' />
+
         {/* Desktop Navigation */}
         <ul className='hidden md:flex'>
           {navItems.map(item => (

@@ -1,19 +1,25 @@
 import axios from 'axios';
 import SetCookie from '../util/Cookies';
 
-const options = {
-  method: 'GET',
-  url: 'https://binance43.p.rapidapi.com/ticker/24hr'
-};
+const customAxios = axios.create({
+  baseURL: 'http://localhost:5500', // Use baseURL instead of url
+  headers: {
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
+    'Access-Control-Allow-Origin': '*' // No need for comma here
+    // Add any additional headers you need
+  }
+});
 
 const LoginService = async (body) => {
-
   try {
-    if (body === null) {
-        throw new Error("Request body cannot be null");
+    if (!body) {
+      throw new Error("Request body cannot be null");
     }
 
-    const response = await axios.request({ ...options, data: body });
+    console.log(body);
+
+    const response = await customAxios.post('/login', body); // Use customAxios for making requests
 
     // Assuming the response should contain JWT and be stored inside a cookie
     console.log(response.data.token);
@@ -25,9 +31,8 @@ const LoginService = async (body) => {
   } catch (err) {
     console.error(err);
     alert("Login Failed. Please try again.");
-    
+    return false;
   }
-  return false;
 };
 
 export default LoginService;

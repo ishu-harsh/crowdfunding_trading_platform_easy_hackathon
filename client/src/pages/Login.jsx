@@ -8,7 +8,7 @@ const Login = () => {
 
     const loginstate = {
         email: '',
-        pwd: ''
+        password: ''
       };
 
     const [isError, setIsError] = useState(false);
@@ -33,14 +33,14 @@ const Login = () => {
         if(response === true){
         navigate('/dashboard');
         }
-        alert("401");
+      
       } catch (error) {
         console.error(error);
         // Handle error appropriately
     }
 
     console.log('Email:', formData.email);
-    console.log('Password:', formData.pwd);
+    console.log('Password:', formData.password);
   };
 
     //
@@ -69,12 +69,12 @@ const Login = () => {
                         />
                     </div>
                     <div>
-                        <label htmlFor="password" className="block text-white">Password {formData.pwd ? '' : <span className="text-red-600">*</span>}</label>
+                        <label htmlFor="password" className="block text-white">Password {formData.password ? '' : <span className="text-red-600">*</span>}</label>
                         <input
                             type="password"
                             id="password"
-                            name='pwd'
-                            value={formData.pwd}
+                            name='password'
+                            value={formData.password}
                             onChange={handleChange}
                             className="w-full px-4 py-2 border rounded-md text-lg" // Adjusted className for bigger size
                             required={true}
