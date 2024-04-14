@@ -211,7 +211,7 @@ const Exchange = () => {
 		"type": "function"
 	}
 ]
-  const contractAddress = '0x4e6d79120066fbd6574c5b8f2cf2f4f8e4c0cc7a';
+  const contractAddress = '0xb1e4585b0a2ccdecbaa4934b6c8fc226f765b25d';
   const contract = new web3.eth.Contract(contractABI, contractAddress);
 
   const [searchQuery, setSearchQuery] = useState("");
@@ -234,7 +234,7 @@ const Exchange = () => {
   const buyTokens = async() => {
     const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
     const account = accounts[0];
-    const weiAmount = web3.utils.toWei(ethAmount, 'ether');
+    const weiAmount = web3.utils.toWei(1, 'ether');
 
     try {
       const transaction = await contract.methods.buyStockToken().send({
@@ -242,16 +242,17 @@ const Exchange = () => {
         value: weiAmount
       });
 
-      
+      setTimeout(() => {
+        alert(`Bought ${searchQuery}  ${quantity} : ${transaction.blockHash} `);
+      }, 500);
 
+    
       setTransactionHash(transaction.transactionHash);
     } catch (error) {
       //console.error('Error buying tokens:', error);
     }
-    
-    setTimeout(() => {
-        alert(`Bought ${searchQuery}  ${quantity}`);
-      }, 800);
+
+   
   };
 
   const stockprice =  [
