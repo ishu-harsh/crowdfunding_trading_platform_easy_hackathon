@@ -1,11 +1,11 @@
 const dotenv = require('dotenv');
 dotenv.config();  // Load environment variables
 
-const port = process.env.PORT || 3000;  // Define the port
+const port = process.env.PORT || 5000;  // Define the port
 
 const axios = require('axios');
 
-
+const cors = require('cors'); // Import cors middleware
 
 const express = require('express');
 const jwt = require('jsonwebtoken');
@@ -17,7 +17,8 @@ const { buyShares } = require('./routes/contracts'); // Adjust path as necessary
 const app = express();
 
 app.use(express.json());  // Middleware for parsing JSON
-
+app.use(cors());
+app.options('*', cors());
 
 // Using handlers for routes
 app.post('/register', register);
@@ -66,6 +67,6 @@ console.log(polygonResponse)
 
 
 
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+app.listen(5500, () => {
+  console.log(`Server running on http://localhost:${5500}`);
 });

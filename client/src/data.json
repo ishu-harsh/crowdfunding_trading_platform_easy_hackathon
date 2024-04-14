@@ -1,0 +1,39 @@
+{
+    "stockprice": [
+    {
+        "name": "Apple",
+        "USDT": 176.00,
+        "XRP": 369.79,
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Apple_Computer_Logo_rainbow.svg/412px-Apple_Computer_Logo_rainbow.svg.png"
+    },
+    {
+        "name": "Meta",
+        "USDT": 511.91,
+        "XRP": 1079.55,
+        "url": "https://signsalad.com/wp-content/uploads/2021/11/Screenshot-2021-11-03-at-12.14.11.png"
+    },
+    {
+        "name": "Telsa",
+        "USDT": 171.05,
+        "XRP": 360.72,
+        "url": "https://cdn.logojoy.com/wp-content/uploads/20240110153809/Black-tesla-logo-600x600.png"
+    },
+    {
+        "name": "Amazon",
+        "USDT": 186.13,
+        "XRP": 392.52,
+        "url": "https://i.pinimg.com/736x/0a/06/60/0a06600cc3cedeb49280b54114c88ce6.jpg"
+    },
+    {
+        "name": "Microsoft",
+        "USDT": 421.90,
+        "XRP": 889.73,
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2048px-Microsoft_logo.svg.png"
+    },
+    {
+        "name": "NVIDIA",
+        "USDT": 881.86,
+        "XRP": 1859.72,
+        "url": "https://www.nvidia.com/content/dam/en-zz/Solutions/about-nvidia/logo-and-brand/02-nvidia-logo-color-wht-500x200-4c25-p.png"
+    }
+]}
